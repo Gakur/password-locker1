@@ -47,11 +47,11 @@ class TestCredentials(unittest.TestCase) :
     #second test    
     def test_init(self):
         """
-        Test case to check if a new Credentials instance has been initialized correctly
+        Test case to check if a new Credentials instance has been initialized as expected correctly.
         """
-        self.assertEqual(self.new_credential.account,'Gmail')
-        self.assertEqual(self.new_credential.userName,'Owiti_Charles')
-        self.assertEqual(self.new_credential.password,'yx5Gij43')
+        self.assertEqual(self.new_credential.Account,"Gmail")
+        self.assertEqual(self.new_credential.userName,"Peter Gakure")
+        self.assertEqual(self.new_credential.passWord,"Peter120")
 
     def save_credential_test(self):
         """
@@ -65,8 +65,9 @@ class TestCredentials(unittest.TestCase) :
         '''
         method that does clean up after each test case has run.
         '''
-        Credentials.credentials_list = []
+        Credentials.credentials_List = []
 
+    #third test
     def test_save_many_accounts(self):
         '''
         test to check if we can save multiple credentials objects to our credentials list
