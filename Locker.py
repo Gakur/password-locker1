@@ -74,10 +74,10 @@ class Credentials :
     @classmethod
     def find_credential(cls, Account):
         """
-        Method that takes in a account_name and returns a credential that matches that account_name.
+        Method that takes in an account_name and returns a credential that matches that account_name.
 
         """
-        for credential in cls.credentials_list:
+        for credential in cls.credentials_List:
             if credential.Account == Account:
                 return credential
 
