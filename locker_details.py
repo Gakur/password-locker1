@@ -12,13 +12,13 @@ function()
 
 def create_new_user(username,password):
     '''
-    Function to create a new user with a username and password
+    This is a Function to create a new user with a username and password
     '''
     new_user = User(username,password)
     return new_user
 
-def save_user(user):
+def save_new_user(user):
     '''
-    Function to save a new user
+    This function saves a new user
     '''
-    user.save_user()
+    user.save_new_user()
