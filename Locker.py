@@ -94,7 +94,7 @@ class Credentials :
     @classmethod
     def display_credentials(cls):
         """
-        This Method returns all items in the credentials list
+        This Method returns all items present in the credentials list
 
         """
         return cls.credentials_List
