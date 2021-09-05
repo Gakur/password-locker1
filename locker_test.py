@@ -36,12 +36,15 @@ class TestCredentials(unittest.TestCase) :
     A test class that defines test cases for credentials class
 
     """ 
+    #first test
     def setUp(self):
         """
-        Method that runs before each individual credentials test methods run.
+        Method that runs before each individual credentials test run.
 
         """
-        self.new_credential = Credentials('Gmail','Owiti_Charles','yx5Gij43')
+        self.new_credential = Credentials("Gmail","Peter Gakure","Peter120")
+
+    #second test    
     def test_init(self):
         """
         Test case to check if a new Credentials instance has been initialized correctly
