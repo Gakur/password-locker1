@@ -102,6 +102,7 @@ class TestCredentials(unittest.TestCase) :
 
         self.assertEqual(the_credential.Account,test_credential.Account)
 
+    #sixth test
     def test_credential_exist(self):
         """
         test to check if we can return a true or false based on whether we find or can't find the credential.
@@ -111,13 +112,14 @@ class TestCredentials(unittest.TestCase) :
         the_credential.save_details()
         credential_is_found = Credentials.if_credential_exist("Twitter")
         self.assertTrue(credential_is_found)
-
+ 
+    #seventh test 
     def test_display_all_saved_credentials(self):
         '''
         method that displays all the credentials that has been saved by the user
         '''
 
-        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_List)
 
 if __name__ == "__main__":
     unittest.main()
