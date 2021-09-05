@@ -17,7 +17,7 @@ class User :
         self.username = username
         self.password = password
 
-    def save_user(self):
+    def save_new_user(self):
         """
         This a method that saves a new user instance into the user List.
         
@@ -82,12 +82,12 @@ class Credentials :
                 return credential
 
     @classmethod
-    def if_credential_exist(cls, account):
+    def if_credential_exist(cls, Account):
         """
         This Method checks if a credential exists from the credential list and returns true or false depending if the credential exists or not.
         """
         for credential in cls.credentials_List:
-            if credential.account == account:
+            if credential.Account == Account:
                 return True
         return False
 
