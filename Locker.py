@@ -8,7 +8,7 @@ class User :
     """
 
     user_List = [] #empty user list
-    def __init__(self, username, password) -> None:
+    def __init__(self, username, password):
 
         """
         This method defines the properties required for a user.
@@ -51,56 +51,53 @@ class Credentials :
                 a_user == user.username
         return a_user
 
-    def __init__(self,account,userName, password):
+    def __init__(self,Account,userName, passWord):
         """
         method that defines user credentials to be stored
         """
-        self.account = account
+        self.Account = Account
         self.userName = userName
-        self.password = password
+        self.passWord = passWord
     
     def save_details(self):
         """
         method to store a new credential to the credentials list
         """
-        Credentials.credentials_list.append(self)
+        Credentials.credentials_List.append(self)
 
     def delete_credentials(self):
         """
-        delete_credentials method that deletes an account credentials from the credentials_list
+        delete_credentials method that deletes an account credentials from the credentials_List
         """
-        Credentials.credentials_list.remove(self)
+        Credentials.credentials_List.remove(self)
     
     @classmethod
-    def find_credential(cls, account):
+    def find_credential(cls, Account):
         """
         Method that takes in a account_name and returns a credential that matches that account_name.
 
         """
         for credential in cls.credentials_list:
-            if credential.account == account:
+            if credential.Account == Account:
                 return credential
-    @classmethod
-    def copy_password(cls,account):
-        found_credentials = Credentials.find_credential(account)
-        pyperclip.copy(found_credentials.password)
 
     @classmethod
     def if_credential_exist(cls, account):
         """
-        Method that checks if a credential exists from the credential list and returns true or false depending if the credential exists.
+        This Method checks if a credential exists from the credential list and returns true or false depending if the credential exists.
         """
-        for credential in cls.credentials_list:
+        for credential in cls.credentials_List:
             if credential.account == account:
                 return True
         return False
+
     @classmethod
     def display_credentials(cls):
         """
-        Method that returns all items in the credentials list
+        This Method returns all items in the credentials list
 
         """
-        return cls.credentials_list
+        return cls.credentials_List
 
     def generatePassword(stringLength=8):
         """Generate a random password string of letters and digits and special characters"""
