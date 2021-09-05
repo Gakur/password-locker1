@@ -8,11 +8,11 @@
 This project is a python application that manages login and signup credentials of a person for various accounts i.e. username and passwords for each account. It also stores the passwords and generates a unique password for a user if they do not want to generate new passwords by themselves.
 
 ## User Stories
-The user would like to.... :
-* To create an account for the application or log into the application.
+As a user, I would like to.... :
+* Create an account for the application or log into the application.
 * Store my existing acounts login details for various accounts that i have registered for.
 * Generate new password for an account that i haven't registered for and store it with the account name.   
-* Delete stored account login details that i do now want anymore.
+* Delete stored account login details that i do not want anymore.
 
 
 ## Installation / Setup instruction
@@ -47,7 +47,7 @@ The user would like to.... :
 |Store a new credential in the application| Enter ```CNC```|Enter Account, username, password<br>choose ```tp``` to enter your password or ```grp``` for the application to generate a password for you |
 |Display all stored credentials | Enter ```DC```|A list of all credentials that has been stored or ```You don't have any credentials saved yet``` |
 |Find a stored credential based on account name|Enter ```FC```| Enter the Account Name you want to search for and returns the account details|
-|Delete an existing credential that you don't want anymore|Enter ```DL```|Enter the account name of the Credentials you want to delete and returns true if the account has been deleted and false if the account doesn't exixt|
+|Delete an existing credential that you don't want anymore|Enter ```DL```|Enter the account name of the Credentials you want to delete and returns true if the account has been deleted and false if the account doesn't exist|
 |Exit the application| Enter ```EX```| The application exits|
 
 ## Technologies Used
