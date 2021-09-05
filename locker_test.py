@@ -59,7 +59,7 @@ class TestCredentials(unittest.TestCase) :
 
         """
         self.new_credential.save_details()
-        self.assertEqual(len(Credentials.credentials_list),1)
+        self.assertEqual(len(Credentials.credentials_List),1)
 
     def tearDown(self):
         '''
@@ -75,7 +75,7 @@ class TestCredentials(unittest.TestCase) :
         self.new_credential.save_details()
         test_credential = Credentials("Twitter","peterjnr","Peter@1010") 
         test_credential.save_details()
-        self.assertEqual(len(Credentials.credentials_list),2)
+        self.assertEqual(len(Credentials.credentials_List),2)
 
     #fourth test
     def test_delete_credential(self):
@@ -87,19 +87,20 @@ class TestCredentials(unittest.TestCase) :
         test_credential.save_details()
 
         self.new_credential.delete_credentials()
-        self.assertEqual(len(Credentials.credentials_list),1)
+        self.assertEqual(len(Credentials.credentials_List),1)
 
+    #fifth test
     def test_find_credentialr(self):
         """
         test to check if we can find a credential entry by account name and display the details of the credential
         """
         self.new_credential.save_details()
-        test_credential = Credentials("Twitter","mikeycharles","Mfh45hfk") 
+        test_credential = Credentials("Twitter","peterjnr","Peter@1010") 
         test_credential.save_details()
 
         the_credential = Credentials.find_credential("Twitter")
 
-        self.assertEqual(the_credential.account,test_credential.account)
+        self.assertEqual(the_credential.Account,test_credential.Account)
 
     def test_credential_exist(self):
         """
