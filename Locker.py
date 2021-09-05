@@ -12,6 +12,7 @@ class User :
 
         """
         This method defines the properties required for a user.
+
         """
         self.username = username
         self.password = password
@@ -19,6 +20,7 @@ class User :
     def save_user(self):
         """
         This a method that saves a new user instance into the user List.
+        
         """
-        User.user_list.append(self)
+        User.user_List.append(self)
     
