@@ -23,4 +23,14 @@ class User :
         
         """
         User.user_List.append(self)
+
+    @classmethod
+    def display_user(cls):
+        return cls.user_List
+
+    def delete_user(self):
+        '''
+        delete_user method deletes a saved user's account from the list
+        '''
+        User.user_List.remove(self)   
     
