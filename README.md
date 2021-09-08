@@ -33,7 +33,7 @@ As a user, I would like to.... :
 ### Running the Application
 * To run the application, open the cloned file in terminal and run the following commands:
 
-        $ chmod +x interface.py
+        $ chmod +x locker_deails.py
         $ ./locker_details.py
 * To run test for the application
         $ python3 locker_test.py
